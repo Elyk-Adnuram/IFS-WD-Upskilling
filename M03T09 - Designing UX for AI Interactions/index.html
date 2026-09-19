@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>AI Study Buddy</h1>
+        <p class="description">Enter a topic below to receive a personalized study tip.</p>
+
+        <!-- Form & Input Controls -->
+        <div class="input-group">
+            <label for="topic-input">Study Topic:</label>
+            <input type="text" id="topic-input"
+                placeholder="e.g., JavaScript Promises, Network Segmentation, Machine Learning" autocomplete="off">
+        </div>
+
+        <div class="button-group">
+            <button id="generate-btn">Generate Tip</button>
+            <button id="retry-btn" class="hidden">Retry</button>
+        </div>
+
+        <!-- Accessibility: Dynamic Status Feedback (ARIA Live Region) -->
+        <p id="status-message" aria-live="polite" class="status-message"></p>
+
+        <!-- Response Area -->
+        <div id="response-container" class="response-container hidden" aria-live="polite"></div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
