@@ -9,7 +9,8 @@ function App() {
   const [dataLoading, setDataLoading] = useState(false);
   const [errors, setErrors] = useState(null);
   const [history, setHistory] = useState([]);
-  const handleSubmit = async (event) => {
+
+  const handleSubmit = async () => {
     // Check if prompt is empty
     if (!userPrompt.trim()) {
       setErrors("Please enter a message before clicking the submit button.");
@@ -33,6 +34,7 @@ function App() {
       setDataLoading(false);
     }
   };
+
   return (
     <>
       <main>
@@ -45,9 +47,21 @@ function App() {
             setUserPrompt(event.target.value);
           }}
         />
-        <button type="Submit" onClick={handleSubmit}>
+        <button type="Submit" onClick={handleSubmit} disabled={dataLoading}>
           Submit
         </button>
+        {dataLoading && <p>Generating response...</p>}
+        {errors && <p>{errors}</p>}
+        {aiResponse && (
+          <div className="response-panel">
+            <h2>AI Response</h2>
+            <p>{aiResponse}</p>
+          </div>
+        )}
+        <br></br>
+        <br></br>
+        {/* <ChatHistory history={history} /> */}
+        <RecommendationPanel recommendations={recommendations} />
       </main>
     </>
   );

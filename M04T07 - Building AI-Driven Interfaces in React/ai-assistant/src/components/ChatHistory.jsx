@@ -1,4 +1,5 @@
 import MessageItem from "./MessageItem";
+
 export default function ChatHistory({ history }) {
   return (
     <div className="history-container">
