@@ -66,7 +66,7 @@ export default function Uncertainty() {
               </div>
               <p>{movie.summary}</p>
               <div className="accuracy-warning">
-                <small>⚠️ AI-generated detail • Verify plot points before viewing</small>
+                <small>AI-generated detail • Verify plot points before viewing</small>
               </div>
             </div>
           ))}
