@@ -1,19 +1,72 @@
-# React + Vite
+# Personal Event Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite web app for scheduling and tracking personal or professional
+events, with an AI-powered event assistant.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Register, log in, and manage events (name, date, time, location, description)
+from a dashboard. Edit or delete events at any time. A built-in Help page
+explains every feature.
 
-## React Compiler
+## Install
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```bash
+npm install
+```
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Run
 
-## Expanding the ESLint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open the URL printed in the terminal (usually http://localhost:5173).
+
+## AI feature
+
+The **AI event assistant** lives inside the event form. From the event name
+(and any details entered) it can:
+
+- **Generate a description**
+- **Suggest preparation tasks**
+
+The result appears in an editable draft panel, labeled as AI-generated, with a
+review notice. Nothing changes in the event until the user clicks
+**Add to description**. The draft can be edited, regenerated, or discarded.
+The panel also shows a loading state and an error message with a retry button.
+
+### AI service
+
+- **OpenRouter** (`https://openrouter.ai/api/v1/chat/completions`) via `fetch()`.
+- To enable it, copy `.env.example` to `.env` and set `VITE_OPENROUTER_API_KEY`.
+  Optionally change `VITE_OPENROUTER_MODEL` to any free model.
+- **No key?** The app falls back to a simulated assistant (delayed, templated
+  responses) so loading, error and review flows still work. Simulated output is
+  labeled as such.
+
+### Known limitations
+
+- AI output can be inaccurate or generic and must be reviewed.
+- Free models may be rate-limited, slow, or temporarily unavailable.
+- A `VITE_` API key is bundled into client code. This is acceptable for a
+  portfolio demo; use a backend proxy in production.
+- The simulated assistant gives templated text, not real AI output.
+
+## Data and security note
+
+This is a front-end-only project. Accounts and events are stored in the
+browser's `localStorage` (passwords are SHA-256 hashed). Use a real backend
+for production.
+
+## Project structure
+
+```
+src/
+  components/  Header, ProtectedRoute, EventForm, EventCard, AIAssistant
+  context/     AuthContext, EventContext, AIContext
+  pages/       Register, Login, Dashboard, EventEditor, Help, NotFound
+  services/    aiService (OpenRouter + simulated fallback)
+  utils/       validation, storage
+  styles/      global stylesheet
+```

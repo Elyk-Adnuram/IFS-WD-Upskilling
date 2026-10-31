@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to AI & Machine Learning</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Introduction to AI & Machine Learning</h1>
+        <p class="subtitle">Exploring fundamental concepts, responsible development, and interactive recommendation
+            logic.</p>
+    </header>
+
+    <main class="container">
+        <!-- Section 1: Introduction to AI -->
+        <section class="card">
+            <h2>Introduction to AI</h2>
+            <p>
+                <strong>Artificial Intelligence (AI)</strong> refers to the ability of computer systems to perform tasks
+                that traditionally require human intelligence. These tasks include understanding natural language,
+                recognizing visual patterns, making automated predictions, and adapting to user context.
+            </p>
+            <p>
+                AI is a broad field encompassing both deterministic, hand-crafted rule systems and dynamic, data-driven
+                architectures that augment modern software experiences.
+            </p>
+        </section>
+
+        <!-- Section 2: What Machine Learning Means -->
+        <section class="card">
+            <h2>What Machine Learning Means</h2>
+            <p>
+                <strong>Machine Learning (ML)</strong> is a specialized subset of AI. While traditional programming
+                relies on developers hand-coding explicit rules for every edge case, ML systems learn underlying
+                statistical patterns directly from data examples.
+            </p>
+            <p>
+                In an ML workflow, the system uses <em>training</em> to adjust internal mathematical parameters (such as
+                slopes and intercepts in regression) and subsequently performs <em>inference</em> to produce predictions
+                when given novel, unseen data.
+            </p>
+        </section>
+
+        <!-- Section 3: How AI is Used in Web Applications -->
+        <section class="card">
+            <h2>How AI is Used in Web Applications</h2>
+            <p>Modern web development integrates AI to solve concrete problems and reduce friction:</p>
+            <ul>
+                <li><strong>Recommendation Engines:</strong> Personalizing item feeds, learning modules, or products
+                    based on user browsing behavior.</li>
+                <li><strong>Chatbots & Assistive Tools:</strong> Handling natural-language queries, customer onboarding,
+                    and instant triage.</li>
+                <li><strong>Classification & Triage:</strong> Automatically sorting support tickets, filtering spam, and
+                    performing sentiment analysis.</li>
+                <li><strong>Content Summarization & Search:</strong> Condensing user reviews and enabling semantic
+                    search across documentation.</li>
+            </ul>
+        </section>
+
+        <!-- Section 4: Responsible AI Considerations -->
+        <section class="card">
+            <h2>Responsible AI Considerations</h2>
+            <p>Integrating AI introduces ethical, operational, and UX risks that developers must actively mitigate:</p>
+            <ul>
+                <li><strong>Accuracy & Hallucination:</strong> Models can present incorrect information with high
+                    confidence; high-impact domains require human review safeguards.</li>
+                <li><strong>Privacy & Security:</strong> Minimize the exposure of sensitive user data to external model
+                    APIs and maintain transparent data policies.</li>
+                <li><strong>Bias & Fairness:</strong> Training data that mirrors historical or social inequalities will
+                    produce biased outcomes.</li>
+                <li><strong>Transparency & User Agency:</strong> Clearly indicate when content is machine-generated and
+                    provide manual override or feedback options.</li>
+            </ul>
+        </section>
+
+        <!-- Section 5: Learning Path Recommender -->
+        <section class="card interactive-section">
+            <h2>Learning Path Recommender</h2>
+            <p>Enter your current progress metrics below to receive a personalized study path recommendation.</p>
+
+            <form id="recommender-form">
+                <div class="form-group">
+                    <label for="quiz-score">Quiz Score (0 - 100):</label>
+                    <input type="number" id="quiz-score" name="quizScore" min="0" max="100" placeholder="e.g., 75"
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="confidence-level">Confidence Level:</label>
+                    <select id="confidence-level" name="confidenceLevel" required>
+                        <option value="" disabled selected>Select confidence</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="learning-pace">Preferred Learning Pace:</label>
+                    <select id="learning-pace" name="learningPace" required>
+                        <option value="" disabled selected>Select pace</option>
+                        <option value="relaxed">Relaxed</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="accelerated">Accelerated</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submit-btn">Get Recommendation</button>
+            </form>
+
+            <!-- Output Display Area -->
+            <div id="result-container" class="result-box hidden">
+                <h3 id="recommendation-title"></h3>
+                <p id="recommendation-reason"></p>
+                <div class="rule-note">
+                    <strong>System Note:</strong> This feature uses explicit, rule-based logic (if/else conditions)
+                    rather than a trained machine learning model.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Intro to AI Practical Task. Built for beginner web developers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

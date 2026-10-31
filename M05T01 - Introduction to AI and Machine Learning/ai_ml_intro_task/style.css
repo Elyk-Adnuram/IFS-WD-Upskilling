@@ -1,3 +1,166 @@
-body {
+:root {
+  --primary-color: #35eb25;
+  --primary-hover: #175c09;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --highlight-bg: #eff6ff;
+  --highlight-border: #93c5fd;
+}
+
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  padding: 0;
+}
+
+header {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4rem;
+}
+
+.card p {
+  margin-bottom: 0.8rem;
+}
+
+.card ul {
+  padding-left: 1.25rem;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Form Styling */
+.interactive-section {
+  border-left: 4px solid var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-color);
+}
+
+button#submit-btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button#submit-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Output Display Box */
+.result-box {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 6px;
+  background-color: var(--highlight-bg);
+  border: 1px solid var(--highlight-border);
+}
+
+.result-box h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.result-box p {
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.rule-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px dashed var(--highlight-border);
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
 }

@@ -1,4 +1,4 @@
-// 1. Base Data Catalog & Target Vector
+// Base Data Catalog & Target Vector
 
 // Mock 4-Dimensional Embeddings tracking: [FrontEnd, BackEnd, Mobile, DataScience]
 const articleRegistry = [
