@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStudy AI Feature Concept</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <h1>SmartStudy</h1>
+            <a href="#demo">Try the Demo</a>
+        </nav>
+
+        <section>
+            <p class="eyebrow">Generative AI Feature Concept</p>
+            <h2>Personalized Practice Activity Generator</h2>
+            <p>
+                SmartStudy uses generative AI to create custom programming practice
+                activities based on a learner’s topic, level, and preferred context.
+            </p>
+        </section>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Application Overview</h2>
+            <p>
+                SmartStudy is a learning platform for beginner and intermediate web
+                development students. The platform provides lessons, quizzes, coding
+                challenges, and revision activities to help learners build practical
+                programming skills.
+            </p>
+            <p>
+                The main problem SmartStudy aims to solve is that students often need
+                practice activities that match their current level of understanding. A
+                single worksheet may be too simple for one student and too difficult
+                for another.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Traditional Feature</h2>
+            <p>
+                In a traditional learning platform, practice activities are usually
+                written in advance by instructors and stored in a database. Every
+                student studying the same topic receives the same set of questions,
+                examples, and coding tasks.
+            </p>
+            <p>
+                For example, all students learning JavaScript arrays may receive the
+                same activity about creating and updating an array. This approach is
+                easy to manage, but it does not adapt to different skill levels,
+                learning needs, or personal interests.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Generative AI Feature</h2>
+            <p>
+                The proposed feature is an AI-powered practice activity generator. The
+                learner enters a programming topic, selects their experience level,
+                and describes the type of example they would find useful.
+            </p>
+            <p>
+                The application then generates a custom practice activity. For
+                example, a beginner learning arrays could receive a simple task based
+                on shopping lists, while a more advanced learner could receive a task
+                involving product inventory or user data.
+            </p>
+            <p>
+                This creates a more personalized experience because the learner is not
+                limited to one predefined activity. The generated output reflects the
+                learner’s current needs and can provide more relevant practice.
+            </p>
+        </section>
+
+        <section class="card demo" id="demo">
+            <h2>User Experience Walkthrough</h2>
+            <p>
+                This mock form shows how a learner could request a personalized
+                activity. The JavaScript demo does not connect to a real AI service.
+                Instead, it simulates the type of generated output the feature could
+                provide.
+            </p>
+
+            <form id="activityForm">
+                <label for="topic">Topic</label>
+                <input type="text" id="topic" value="JavaScript arrays">
+
+                <label for="level">Experience level</label>
+                <select id="level">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+
+                <label for="context">Preferred context</label>
+                <input type="text" id="context" value="online store inventory">
+
+                <button type="submit">Generate Activity</button>
+            </form>
+
+            <article class="output" id="output">
+                <h3>Generated Activity</h3>
+                <p>
+                    Complete the form and select “Generate Activity” to see a sample
+                    generated output.
+                </p>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2>Developer Perspective</h2>
+            <p>
+                Generative AI is being used because it allows the platform to create
+                learning activities dynamically instead of relying only on activities
+                that were written in advance. This makes the platform more flexible
+                and helps support different learners at different stages.
+            </p>
+            <p>
+                The main benefit is personalization. Learners can receive practice
+                activities that match their topic, level, and interests. This can make
+                the learning experience more relevant and engaging.
+            </p>
+            <p>
+                Developers would still need to consider challenges such as output
+                quality, unclear instructions, inaccurate generated content, and the
+                cost of AI requests. Developer oversight remains important because
+                generated activities should be reviewed, tested, and improved before
+                being used in a production learning environment.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Instructions and Output Quality</h2>
+            <div class="comparison">
+                <article>
+                    <h3>Instruction 1</h3>
+                    <p class="prompt">Generate a JavaScript arrays activity.</p>
+                    <p>
+                        This instruction is very broad. It may produce a useful result,
+                        but the output is likely to be generic because it does not
+                        explain the learner’s level, context, or desired task style.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Instruction 2</h3>
+                    <p class="prompt">
+                        Generate a beginner-friendly JavaScript arrays activity based
+                        on an online store inventory. Include one coding challenge and
+                        one reflection question.
+                    </p>
+                    <p>
+                        This instruction is more effective because it gives the AI more
+                        context. It identifies the learner level, the topic, the example
+                        context, and the structure of the expected output.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>SmartStudy AI Feature Concept | Generative AI in Web Applications</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

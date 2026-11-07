@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background-color: #f3f4f6;
+    line-height: 1.6;
+}
+
+.hero {
+    background: #111827;
+    color: white;
+    padding: 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+}
+
+.hero section {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.hero h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 0.5rem 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    color: #93c5fd;
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 2rem auto;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #111827;
+}
+
+form {
+    display: grid;
+    gap: 0.9rem;
+    margin: 1.5rem 0;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 0.85rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font: inherit;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.output {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.comparison article {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 14px;
+}
+
+.prompt {
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+@media (max-width: 700px) {
+    nav {
+        align-items: flex-start;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.4rem;
+    }
+}
