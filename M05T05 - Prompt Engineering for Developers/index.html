@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Engineering Portfolio | SkillTrack Development Team</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span class="brand-badge">SkillTrack Engineering</span>
+                <h1 class="brand-title">prompt_engineering_portfolio</h1>
+                <p class="brand-subtitle">AI Workflow &amp; Prompt Specification Guide</p>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Portfolio Sections">
+                <a href="#section-1" class="nav-link active">01. Prompt Analysis</a>
+                <a href="#section-2" class="nav-link">02. Code Generation Prompt</a>
+                <a href="#section-3" class="nav-link">03. Debugging Prompt</a>
+                <a href="#section-4" class="nav-link">04. Documentation Prompt</a>
+                <a href="#section-5" class="nav-link">05. Testing Prompt</a>
+                <a href="#section-6" class="nav-link">06. Prompt Refinement Challenge</a>
+                <a href="#section-7" class="nav-link">07. AI Tool Comparison</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Prepared for <strong>SkillTrack</strong> Web Application</p>
+                <p class="meta-note">Stack: HTML5, Vanilla CSS3, ES6+ JS</p>
+            </div>
+        </aside>
+
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <span class="mobile-title">prompt_engineering_portfolio</span>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰ Menu
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="hero">
+                <div class="hero-meta">
+                    <span class="pill">Project: SkillTrack</span>
+                    <span class="pill pill-outline">Developer Prompt Engineering Specification</span>
+                </div>
+                <h2>Structured Prompt Engineering for Modern Web Development</h2>
+                <p class="hero-lead">
+                    A comprehensive portfolio documenting standardized prompt engineering workflows across code
+                    generation, debugging, technical documentation, automated testing, iterative refinement, and AI
+                    tooling for the SkillTrack learning platform.
+                </p>
+            </header>
+
+            <!-- Section 1: Prompt Analysis -->
+            <section id="section-1" class="portfolio-section">
+                <div class="section-header">
+                    <span class="section-number">Section 01</span>
+                    <h3>Prompt Analysis</h3>
+                </div>
+
+                <div class="prose-grid">
+                    <article class="card">
+                        <h4>What Prompt Engineering Is</h4>
+                        <p>
+                            Prompt engineering is the disciplined practice of designing clear, structured, and
+                            context-rich instructions that guide Large Language Models (LLMs) toward generating
+                            accurate, consistent, and production-ready outputs. Rather than treating generative AI as a
+                            casual search engine or conversational partner, software developers approach prompt
+                            engineering much like writing miniature technical specifications—explicitly defining the
+                            core objective, background context, technical constraints, and desired output format.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h4>Why Prompt Engineering Is Important for Developers</h4>
+                        <p>
+                            As AI tools become embedded across integrated development environments and engineering
+                            workflows, productivity gains depend less on the model itself and more on how effectively a
+                            developer communicates requirements. Well-engineered prompts reduce development bottlenecks
+                            across scaffolding components, diagnosing bugs, writing unit tests, and drafting API
+                            documentation, allowing engineers to retain architectural control while accelerating
+                            delivery.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h4>How Poorly Written Prompts Impact AI-Generated Outputs</h4>
+                        <p>
+                            LLMs generate responses by predicting language patterns based on supplied context rather
+                            than executing deterministic rules. When a prompt is vague or omits critical boundaries, the
+                            model is forced to fill in the gaps with assumptions. In a software engineering context,
+                            this leads to generic boilerplate, incompatible framework dependencies, overlooked
+                            accessibility or security requirements, subtle logic bugs, and hallucinations such as
+                            non-existent library methods.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h4>Why Developers Should Refine Prompts Iteratively</h4>
+                        <p>
+                            Constructing an optimal prompt on the very first attempt is rare, particularly for complex
+                            application features. Iterative prompt refinement mirrors the standard software development
+                            lifecycle: an engineer submits a baseline prompt, evaluates the generated output for gaps or
+                            edge-case failures, tightens constraints or adds few-shot examples, and regenerates the
+                            result. Each cycle narrows ambiguity and aligns the output closer to project standards.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section 2: Code Generation Prompt -->
+            <section id="section-2" class="portfolio-section">
+                <div class="section-header">
+                    <span class="section-number">Section 02</span>
+                    <h3>Code Generation Prompt</h3>
+                    <p class="section-subtitle">Feature Target: SkillTrack Interactive Course Progress Tracker</p>
+                </div>
+
+                <div class="comparison-stack">
+                    <div class="prompt-box prompt-weak">
+                        <div class="prompt-header">
+                            <span class="status-badge badge-weak">1. Original Prompt (Weak)</span>
+                            <button type="button" class="copy-btn" data-target="prompt-sec2-weak">Copy Prompt</button>
+                        </div>
+                        <pre id="prompt-sec2-weak"><code>Create a progress tracker for SkillTrack.</code></pre>
+                    </div>
+
+                    <div class="card analysis-callout">
+                        <h4>2. Why the Original Prompt Is Weak or Incomplete</h4>
+                        <p>
+                            This instruction specifies a broad feature name without defining the technology stack, data
+                            structure, user interface elements, accessibility requirements, or expected output format.
+                            Because the AI lacks context about what SkillTrack tracks (e.g., course modules, completion
+                            percentages, or lessons), it will make arbitrary assumptions—potentially introducing heavy
+                            external libraries, omitting responsive layouts, or returning incomplete code fragments.
+                        </p>
+                    </div>
+
+                    <div class="prompt-box prompt-strong">
+                        <div class="prompt-header">
+                            <span class="status-badge badge-strong">3. Improved Prompt (Structured)</span>
+                            <button type="button" class="copy-btn" data-target="prompt-sec2-strong">Copy Prompt</button>
+                        </div>
+                        <pre
+                            id="prompt-sec2-strong"><code>Act as a senior front-end web developer building features for SkillTrack, an online learning platform where students monitor their course completion.
+
+Objective:
+Create an interactive Course Progress Tracker component that displays a student's active courses, completed modules, overall percentage progress, and allows learners to mark individual lessons as complete or incomplete.
+
+Context:
+The component will be integrated into the SkillTrack student dashboard and must work seamlessly on both desktop and mobile viewports.
+
+Constraints:
+- Use only semantic HTML5, modern vanilla CSS (Flexbox/Grid), and vanilla ES6+ JavaScript.
+- Do not use external CSS frameworks, UI libraries, or JavaScript dependencies.
+- Follow WCAG accessibility best practices, including ARIA progressbar attributes, keyboard-accessible checkboxes, and sufficient color contrast.
+- Store progress updates dynamically in browser localStorage so state persists across page reloads.
+
+Output Format:
+Provide complete, clean, production-ready HTML, CSS, and JavaScript code separated into clear blocks, accompanied by concise inline comments explaining key logic and DOM updates.</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h4>4. Comparison: How the Improved Prompt Elevates Quality</h4>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Dimension</th>
+                                        <th>Original Prompt</th>
+                                        <th>Improved Prompt</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Context</strong></td>
+                                        <td>Mentions "SkillTrack" without explaining what the platform does or where the
+                                            component lives.</td>
+                                        <td>Establishes a senior front-end role, defines SkillTrack as an online
+                                            learning platform, and situates the component inside the student dashboard.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Constraints</strong></td>
+                                        <td>Zero technical boundaries; allows arbitrary libraries, inline styles, or
+                                            non-accessible markup.</td>
+                                        <td>Enforces vanilla HTML/CSS/JS with zero external dependencies, WCAG ARIA
+                                            standards, and <code>localStorage</code> persistence.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Output Requirements</strong></td>
+                                        <td>No guidance on file organization, completeness, or documentation.</td>
+                                        <td>Requires complete, separated HTML, CSS, and JS blocks with explanatory
+                                            inline comments for maintainability.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Debugging Prompt -->
+            <section id="section-3" class="portfolio-section">
+                <div class="section-header">
+                    <span class="section-number">Section 03</span>
+                    <h3>Debugging Prompt</h3>
+                    <p class="section-subtitle">Diagnosing an Off-By-One Array Indexing Error in SkillTrack Analytics
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>Provided Buggy JavaScript Snippet</h4>
+                    <pre><code>const students = [
+  { name: "Sarah", completed: 5 },
+  { name: "John", completed: 8 },
+  { name: "Aisha", completed: 12 }
+];
+
+function calculateAverageCompletion(data) {
+  let total = 0;
+  for (let i = 0; i &lt;= data.length; i++) {
+    total += data[i].completed;
+  }
+  return total / data.length;
+}
+
+console.log(calculateAverageCompletion(students));</code></pre>
+                </div>
+
+                <div class="comparison-stack">
+                    <div class="prompt-box prompt-weak">
+                        <div class="prompt-header">
+                            <span class="status-badge badge-weak">1. Poor Debugging Prompt</span>
+                            <button type="button" class="copy-btn" data-target="prompt-sec3-weak">Copy Prompt</button>
+                        </div>
+                        <pre id="prompt-sec3-weak"><code>My JavaScript code isn't working. Please fix it.
+
+const students = [
+  { name: "Sarah", completed: 5 },
+  { name: "John", completed: 8 },
+  { name: "Aisha", completed: 12 }
+];
+
+function calculateAverageCompletion(data) {
+  let total = 0;
+  for (let i = 0; i &lt;= data.length; i++) {
+    total += data[i].completed;
+  }
+  return total / data.length;
+}
+
+console.log(calculateAverageCompletion(students));</code></pre>
+                    </div>
+
+                    <div class="prompt-box prompt-strong">
+                        <div class="prompt-header">
+                            <span class="status-badge badge-strong">2. Improved Debugging Prompt</span>
+                            <button type="button" class="copy-btn" data-target="prompt-sec3-strong">Copy Prompt</button>
+                        </div>
+                        <pre
+                            id="prompt-sec3-strong"><code>Act as a senior JavaScript engineer reviewing analytics utility code for the SkillTrack platform.
+
+Context &amp; Expected Behavior:
+The function `calculateAverageCompletion(data)` takes an array of student progress objects and should return the arithmetic mean of the `completed` lessons property (expected output: `8.333...`).
+
+Actual Behavior &amp; Error:
+When executed, the function throws `TypeError: Cannot read properties of undefined (reading 'completed')` inside the `for` loop.
+
+Code to Review:
+```javascript
+const students = [
+  { name: "Sarah", completed: 5 },
+  { name: "John", completed: 8 },
+  { name: "Aisha", completed: 12 }
+];
+
+function calculateAverageCompletion(data) {
+  let total = 0;
+  for (let i = 0; i &lt;= data.length; i++) {
+    total += data[i].completed;
+  }
+  return total / data.length;
+}
+
+console.log(calculateAverageCompletion(students));
+
+<div class="card analysis-callout">
+    <h4>3. Written Explanation (Referencing Lesson Concepts)</h4>
+    <p>
+        As highlighted in the lesson's debugging guidelines, effective debugging prompts require five critical details:
+        the relevant code, the exact error message, expected behavior, actual behavior, and clear response expectations.
+        The poor prompt ("My JavaScript code isn't working. Please fix it.") forces the model to infer intent and may
+        yield a silent code rewrite without educational context.
+    </p>
+    <p>
+        In contrast, the improved prompt applies <strong>role-based prompting</strong> ("senior JavaScript engineer"),
+        explicitly pairs <strong>expected vs. actual behavior</strong> (expected average vs. <code>TypeError</code> on
+        <code>undefined</code> due to <code>i &lt;= data.length</code>), and defines a structured <strong>output
+            format</strong>. By requesting root-cause analysis, defensive edge-case handling, and a team-friendly
+        explanation, the prompt turns a simple bug fix into reliable, verifiable engineering guidance.
+    </p>
+</div>
+</div>
+
+<div class="prompt-box prompt-strong">
+    <div class="prompt-header">
+        <span class="status-badge badge-strong">Structured Documentation Prompt</span>
+        <button type="button" class="copy-btn" data-target="prompt-sec4">Copy Prompt</button>
+    </div>
+    <pre id="prompt-sec4"><code>Act as a senior technical writer and software engineer creating internal developer documentation for the SkillTrack engineering team.
+        <div class="card">
+            <h4>Why Each Prompt Component Was Included</h4>
+            <ul class="styled-list">
+                <li>
+                    <strong>Audience:</strong> Specifying junior and mid-level onboarding developers calibrates technical
+                    depth—avoiding overly simplistic explanations of HTTP while still clarifying SkillTrack-specific
+                    architecture and debouncing patterns.
+                </li>
+                <li>
+                    <strong>Context:</strong> Explaining how the Keyword Course Search operates across both UI filtering and the
+                    <code>GET /api/v1/courses</code> endpoint prevents the AI from hallucinating unrelated search
+                    implementations (such as GraphQL or Elasticsearch).
+                </li>
+                <li>
+                    <strong>Required Sections:</strong> Explicitly enumerating overview, parameters, authentication, examples,
+                    error codes, and edge cases guarantees comprehensive coverage so developers do not have to guess error
+                    payloads or empty-query behavior.
+                </li>
+                <li>
+                    <strong>Formatting Requirements:</strong> Mandating Markdown with H2/H3 headings, parameter tables, and
+                    syntax-highlighted code blocks ensures the output can be committed directly into the repository's
+                    <code>/docs</code> folder without manual reformatting.
+                </li>
+            </ul>
+        </div>
+        </section>
+        
+        <!-- Section 5: Testing Prompt -->
+        <section id="section-5" class="portfolio-section">
+            <div class="section-header">
+                <span class="section-number">Section 05</span>
+                <h3>Testing Prompt</h3>
+                <p class="section-subtitle">Comprehensive QA Suite for the SkillTrack User Registration Form</p>
+            </div>
+        
+            <div class="prompt-box prompt-strong">
+                <div class="prompt-header">
+                    <span class="status-badge badge-strong">Structured QA &amp; Test Generation Prompt</span>
+                    <button type="button" class="copy-btn" data-target="prompt-sec5">Copy Prompt</button>
+                </div>
+                <pre id="prompt-sec5"><code>Act as a senior QA automation engineer designing a comprehensive test suite for the SkillTrack user registration form.
+                    <div class="card analysis-callout">
+                        <h4>How This Prompt Improves Test Coverage</h4>
+                        <p>
+                            A generic request such as "Generate tests for a registration form" typically yields only obvious happy-path
+                            checks and basic empty-field validations. By defining explicit field validation rules and requiring separate
+                            categories for <strong>positive</strong>, <strong>negative</strong>, and <strong>edge cases</strong>, the prompt
+                            systematically forces the AI to probe boundary values (7 vs. 8 characters), input sanitization (whitespace and
+                            Unicode names), security vectors (XSS/injection strings), and cross-field dependencies (Password vs. Confirm
+                            Password). Pairing each test with a concrete <strong>expected outcome</strong> in a tabular format produces
+                            immediately actionable acceptance criteria for both manual QA and automated test scripts.
+                        </p>
+                    </div>
+                    </section>
+                    
+                    <!-- Section 6: Prompt Refinement Challenge -->
+                    <section id="section-6" class="portfolio-section">
+                        <div class="section-header">
+                            <span class="section-number">Section 06</span>
+                            <h3>Prompt Refinement Challenge</h3>
+                            <p class="section-subtitle">Iterative Evolution from Vague Request to Production Specification</p>
+                        </div>
+                    
+                        <div class="baseline-banner">
+                            <span class="badge-baseline">Starting Baseline Prompt</span>
+                            <code>Build a dashboard.</code>
+                        </div>
+                    
+                        <!-- Interactive Filter Tabs for Revisions -->
+                        <div class="revision-controls" role="tablist" aria-label="Prompt Revisions">
+                            <button type="button" class="rev-tab active" data-rev="all">Show All Revisions</button>
+                            <button type="button" class="rev-tab" data-rev="rev-1">Revision 1</button>
+                            <button type="button" class="rev-tab" data-rev="rev-2">Revision 2</button>
+                            <button type="button" class="rev-tab" data-rev="rev-3">Revision 3 (Final)</button>
+                        </div>
+                    
+                        <div class="revisions-container">
+                            <!-- Revision 1 -->
+                            <article class="revision-card" data-rev-item="rev-1">
+                                <div class="revision-header">
+                                    <h4>Revision 1 — Establishing Objective &amp; Domain Context</h4>
+                                    <button type="button" class="copy-btn" data-target="prompt-rev-1">Copy Prompt</button>
+                                </div>
+                                <pre
+                                    id="prompt-rev-1"><code>Build a student learning dashboard for SkillTrack, an online course tracking web application. The dashboard should display a welcome banner, a summary of enrolled courses, overall completion percentage, and upcoming assignment deadlines.</code></pre>
+                        <div class="revision-notes">
+                            <p><strong>What Was Improved:</strong> Replaced the ambiguous phrase "a dashboard" with a
+                                specific
+                                domain objective ("student learning dashboard for SkillTrack") and enumerated four
+                                concrete UI
+                                modules.</p>
+                            <p><strong>Why It Leads to Better Output:</strong> The AI no longer has to guess whether the
+                                dashboard
+                                is for financial analytics, e-commerce sales, or server monitoring. Defining specific
+                                widgets
+                                anchors the layout around learner progress.</p>
+                        </div>
+                        </article>
+
+                        <!-- Revision 2 -->
+                        <article class="revision-card" data-rev-item="rev-2">
+                            <div class="revision-header">
+                                <h4>Revision 2 — Adding Role, Technical Constraints &amp; Interactivity</h4>
+                                <button type="button" class="copy-btn" data-target="prompt-rev-2">Copy Prompt</button>
+                            </div>
+                            <pre id="prompt-rev-2"><code>Act as a front-end web developer. Build a responsive student learning dashboard for SkillTrack, an online course tracking web application, using only semantic HTML5, vanilla CSS (CSS Grid and Flexbox), and vanilla JavaScript.
+                                <!-- Revision 3 -->
+                                <article class="revision-card revision-final" data-rev-item="rev-3">
+                                    <div class="revision-header">
+                                        <h4>Revision 3 (Final) — Complete Specification with Data Structure &amp; Output Format</h4>
+                                        <button type="button" class="copy-btn" data-target="prompt-rev-3">Copy Prompt</button>
+                                    </div>
+                                    <pre id="prompt-rev-3"><code>Act as a senior front-end architect developing the core student interface for SkillTrack, a web platform that helps learners track their progress across online courses.
+                                Objective:
+                                <!-- Section 7: AI Tool Comparison -->
+                                <section id="section-7" class="portfolio-section">
+                                    <div class="section-header">
+                                        <span class="section-number">Section 07</span>
+                                        <h3>AI Tool Comparison</h3>
+                                        <p class="section-subtitle">Evaluating AI Development Assistants in the SkillTrack Workflow</p>
+                                    </div>
+                                
+                                    <div class="card tool-spotlight">
+                                        <div class="tool-header">
+                                            <div>
+                                                <span class="pill">Selected Primary Tool</span>
+                                                <h4>Claude (Anthropic) &amp; Hyperdev</h4>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="tool-grid">
+                                            <div class="tool-item">
+                                                <h5>Which Tool Was Selected</h5>
+                                                <p>
+                                                    For designing and validating the SkillTrack prompt engineering workflows, I selected
+                                                    <strong>Claude</strong> as the primary architectural and documentation assistant, paired with
+                                                    experimentation in <strong>Hyperdev</strong> during bootcamp exercises.
+                                                </p>
+                                            </div>
+                                
+                                            <div class="tool-item">
+                                                <h5>Why This Tool Was Selected</h5>
+                                                <p>
+                                                    Building SkillTrack involves multi-file web architecture, structured technical documentation, and
+                                                    methodical code reviews. Claude was chosen because it excels at reasoning-intensive tasks, following
+                                                    multi-constraint instructions, and maintaining context across long specifications, while Hyperdev
+                                                    provides a focused learning sandbox for testing prompt variations side by side.
+                                                </p>
+                                            </div>
+                                
+                                            <div class="tool-item">
+                                                <h5>Key Strength of the Tool</h5>
+                                                <p>
+                                                    <strong>Strong Instruction Adherence &amp; Long-Context Coherence:</strong> Claude reliably respects
+                                                    negative constraints (such as avoiding external CSS/JS libraries) and maintains consistent
+                                                    formatting across lengthy outputs like multi-section API documentation and structured QA test
+                                                    matrices.
+                                                </p>
+                                            </div>
+                                
+                                            <div class="tool-item">
+                                                <h5>Key Limitation of the Tool</h5>
+                                                <p>
+                                                    <strong>Lack of Live Runtime Execution &amp; Direct Repository Integration:</strong> Unlike
+                                                    IDE-native tools such as Cursor or GitHub Copilot, a standalone conversational interface cannot
+                                                    directly inspect live multi-file workspace changes or execute browser tests automatically—meaning
+                                                    developers must manually copy, run, and verify generated code against runtime edge cases.
+                                                </p>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="analysis-callout inner-callout">
+                                            <h5>How Prompt Engineering Affects Output Quality in This Tool</h5>
+                                            <p>
+                                                Even with a strong reasoning model like Claude, vague prompts produce verbose or over-engineered
+                                                solutions (for instance, defaulting to React components when vanilla JavaScript is required). Applying
+                                                structured prompt engineering—specifically defining role-based context, explicit negative constraints,
+                                                data schemas, and exact output formats—dramatically reduces unnecessary boilerplate, prevents
+                                                architectural drift, and yields clean code and documentation that integrate directly into the SkillTrack
+                                                project on the first or second iteration.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <footer class="page-footer">
+                                    <p><strong>SkillTrack Engineering Team</strong> &bull; Prompt Engineering Portfolio</p>
+                                    <p>Built with semantic HTML5, vanilla CSS3, and vanilla JavaScript.</p>
+                                </footer>
+                                </main>
